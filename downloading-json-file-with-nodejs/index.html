@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Node Server</title>
+</head>
+<body>
+
+<div>
+    <p>Downloading json file with Node.js</p>
+    <p><a href="#" class="button">Json file Download...</a></p>
+</div>
+
+<script type="text/javascript">
+    window.onload = function () {
+        const button = document.getElementsByClassName('button');
+
+        function loadXMLDoc() {
+            let key = 'hyeshin2530';
+            window.open('http://127.0.0.1:3000/download/'+key);
+        }
+        button[0].addEventListener('click', loadXMLDoc);
+    };
+</script>
+
+</body>
+</html>
