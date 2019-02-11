@@ -8,7 +8,14 @@
       <div class="card-body">
         <h5 class="card-title">Vue에서 Jquery 사용하기</h5>
         <p class="card-text">클릭버튼을 선택하면 카드 제목을 Jquery selector로 찾아 text를 보여줍니다.</p>
-        <button type="button" class="btn btn-primary" v-on:click="setAlert">Click</button>
+        <button type="button" class="btn btn-primary" v-on:click="setAlert">
+          <!--solid style-->
+          <font-awesome-icon icon = "bell"/>
+          <font-awesome-icon :icon = "[ 'fas', 'bell']"/>  <!-- Same as above -->
+          <!--regular style-->
+          <font-awesome-icon :icon = "[ 'far', 'bell']"/>
+          Click
+        </button>
       </div>
     </div>
   </div>
