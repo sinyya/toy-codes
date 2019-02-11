@@ -1,4 +1,4 @@
-# using-jquery-in-vue
+# Using Jquery + Bootstrap + FontAwesome in Vue
 
 > A Vue.js project. Jquery + Bootstrap + FontAwesome
 
@@ -82,7 +82,7 @@ bootstrap npm을 통해 설치할 때 popper.js를 함께 설치해야한다.
 <br/>
 
 <a name="fontawesome"></a>
-## Work contents (fontAwesome)
+## Work contents (FontAwesome)
 - [Vue.js | Font Awesome](https://fontawesome.com/how-to-use/on-the-web/using-with/vuejs)
 - [npm @fortawesome/vue-fontawesome](https://www.npmjs.com/package/@fortawesome/vue-fontawesome) 
 
