@@ -4,6 +4,7 @@ const app = express();
 /**
  * routing controller 연결
  */
+app.use('/', require('./api/common'));
 app.use('/upload', require('./api/upload'));
 
 app.listen(3030, ()=>{
