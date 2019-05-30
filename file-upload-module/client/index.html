@@ -14,13 +14,13 @@
 <div class="container">
     <h1>File Upload</h1>
     <div class="row">
-        <form action="#">
+        <form action="http://localhost:3030/upload/image/section01" method="post" enctype="multipart/form-data" id="form">
             <div class="col s12">
-                <div class="title">File 01</div>
+                <div class="title">Image 01</div>
                 <div class="file-field input-field">
                     <div class="btn">
                         <span>File</span>
-                        <input type="file" id="input01">
+                        <input type="file" id="input01" name="image|input01">
                     </div>
                     <div class="file-path-wrapper">
                         <input class="file-path validate" type="text" placeholder="Upload one or more files">
@@ -29,11 +29,11 @@
                 <div class="preview"></div>
             </div>
             <div class="col s12">
-                <div class="title">File 02</div>
+                <div class="title">Image 02</div>
                 <div class="file-field input-field">
                     <div class="btn">
                         <span>File</span>
-                        <input type="file" id="input02">
+                        <input type="file" id="input02" name="image|input02">
                     </div>
                     <div class="file-path-wrapper">
                         <input class="file-path validate" type="text" placeholder="Upload one or more files">
@@ -42,11 +42,11 @@
                 <div class="preview"></div>
             </div>
             <div class="col s12">
-                <div class="title">File 03</div>
+                <div class="title">Thumnail 01</div>
                 <div class="file-field input-field">
                     <div class="btn">
                         <span>File</span>
-                        <input type="file" id="input03">
+                        <input type="file" id="input03" name="thumnail|input01">
                     </div>
                     <div class="file-path-wrapper">
                         <input class="file-path validate" type="text" placeholder="Upload one or more files">
@@ -55,12 +55,31 @@
                 <div class="preview"></div>
             </div>
             <div class="col s12">
-                <button class="btn waves-effect waves-light btn-large" type="submit" name="action">Submit
+                <div class="title">Thumnail 02</div>
+                <div class="file-field input-field">
+                    <div class="btn">
+                        <span>File</span>
+                        <input type="file" id="input04" name="thumnail|input02">
+                    </div>
+                    <div class="file-path-wrapper">
+                        <input class="file-path validate" type="text" placeholder="Upload one or more files">
+                    </div>
+                </div>
+                <div class="preview"></div>
+            </div>
+            <div class="col s12">
+                <button id="sendBtn" class="btn waves-effect waves-light btn-large" type="submit" name="action">Submit
                     <i class="material-icons right">send</i>
                 </button>
             </div>
         </form>
     </div>
 </div>
+
+<!-- Compiled and minified JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<script type="text/javascript">
+
+</script>
 </body>
 </html>
