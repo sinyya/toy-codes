@@ -8,7 +8,7 @@ const multer = require('multer');
 const storage = multer.diskStorage({
     destination: function (req, file, cb) {
         // key 확인
-        console.log(req.params.key);
+        // console.log(req.params.key);
 
         // type 확인
         let type = file.fieldname.split('_')[0]
