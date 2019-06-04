@@ -14,7 +14,7 @@
 <div class="container">
     <h1>File Upload</h1>
     <div class="row">
-        <form action="http://localhost:3030/upload/image/section01" method="post" enctype="multipart/form-data" id="form">
+        <form action="" method="post" enctype="multipart/form-data" id="form">
             <div class="col s12">
                 <div class="title">Image 01</div>
                 <div class="file-field input-field">
@@ -41,7 +41,7 @@
                 </div>
                 <div class="preview"></div>
             </div>
-            <div class="col s12">
+            <!--<div class="col s12">
                 <div class="title">Thumbnail 01</div>
                 <div class="file-field input-field">
                     <div class="btn">
@@ -66,7 +66,7 @@
                     </div>
                 </div>
                 <div class="preview"></div>
-            </div>
+            </div>-->
             <div class="col s12">
                 <button id="sendBtn" class="btn waves-effect waves-light btn-large" type="submit" name="action">Submit
                     <i class="material-icons right">send</i>
@@ -77,8 +77,50 @@
 </div>
 
 <!-- Compiled and minified JavaScript -->
+<script
+        src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 <script type="text/javascript">
+    $(document).ready(function() {
+
+        $("#sendBtn").click(function (event) {
+            //preventDefault 는 기본으로 정의된 이벤트를 작동하지 못하게 하는 메서드이다. submit을 막음
+            event.preventDefault();
+
+            // Get form
+            var form = $('#form')[0];
+
+            // Create an FormData object
+            var data = new FormData(form);
+
+            // disabled the submit button
+            $("#sendBtn").prop("disabled", true);
+
+            $.ajax({
+                type: "POST",
+                enctype: 'multipart/form-data',
+                url: "http://localhost:3030/upload/image/section01",
+                data: data,
+                processData: false,
+                contentType: false,
+                cache: false,
+                timeout: 600000,
+                success: function (data) {
+                    alert("complete");
+                    $("#sendBtn").prop("disabled", false);
+                },
+                error: function (e) {
+                    console.log("ERROR : ", e);
+                    $("#sendBtn").prop("disabled", false);
+                    alert("fail");
+                }
+            });
+        });
+
+
+    });
 
 </script>
 </body>
