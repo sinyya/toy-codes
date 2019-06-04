@@ -6,6 +6,7 @@ const app = express();
  */
 app.use('/', require('./api/common'));
 app.use('/upload', require('./api/upload'));
+app.use('/data', require('./api/data'));
 
 app.listen(3030, ()=>{
     //server 구동 완료
