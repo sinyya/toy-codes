@@ -1,6 +1,7 @@
 // const path = require('path');
 const webpack = require('webpack');
 const ZipPlugin = require('zip-webpack-plugin');
+const HtmlWebPackPlugin = require('html-webpack-plugin');
 
 // fileName format
 const date = new Date();
@@ -18,7 +19,10 @@ module.exports = {
     module: {
     },
     plugins: [
-        // new webpack.HotModuleReplacementPlugin(),
+        new HtmlWebPackPlugin({
+            template: './src/index.html',
+            filename: 'index.html'
+        }),
         new ZipPlugin({
             // OPTIONAL: defaults to the Webpack output path (above)
             // can be relative (to Webpack output path) or absolute
