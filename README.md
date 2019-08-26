@@ -7,3 +7,4 @@ toy-codes.
 - [Downloading json file with node js](./downloading-json-file-with-nodejs)
 - [Using Jquery + Bootstrap + FontAwesome in Vue](./using-jquery-in-vue)
 - [File upload module](./file-upload-module)
+- [webpack output zip](./webpack_output_zip)
