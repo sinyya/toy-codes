@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "webpack"
+    "dev": "cross-env BUILD_TYPE=dev webpack",
+    "zip": "cross-env BUILD_TYPE=zip webpack"
   },
   "author": "",
   "license": "ISC",
@@ -15,5 +16,9 @@
     "webpack": "^4.39.2",
     "webpack-cli": "^3.3.7",
     "zip-webpack-plugin": "^3.0.0"
+  },
+  "dependencies": {
+    "cross-env": "^5.2.0",
+    "webpack-merge": "^4.2.1"
   }
 }
