@@ -5,7 +5,7 @@ const ZipPlugin = require('zip-webpack-plugin');
 const date = new Date();
 function pad2(n) { return n < 10 ? '0' + n : n }
 let dateStr = date.getFullYear().toString() + pad2(date.getMonth() + 1) + pad2( date.getDate()) + pad2( date.getHours() ) + pad2( date.getMinutes() ) + pad2( date.getSeconds() );
-let fileName = 'alaska_prod_' + dateStr +'.zip';
+let fileName = 'project_name_' + dateStr +'.zip';
 
 module.exports = {
     plugins: [
